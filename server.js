@@ -5,6 +5,8 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 
+//make public folder accessible so html can acces its css and javascript
+app.use(express.static('public'));
 
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
